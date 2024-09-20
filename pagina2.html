@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lais💖</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #ffe4e1;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Remove barra de rolagem horizontal */
+        }
+        nav {
+            background-color: #ff69b4;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Adiciona flex wrap para prevenir overflow */
+        }
+        nav ul li {
+            margin: 0 10px; /* Reduzi a margem para evitar overflow */
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: #ff1493;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #ff85c0;
+        }
+        nav ul li a.active {
+            background-color: white;
+            color: #ff69b4;
+            font-weight: bold;
+        }
+        .content {
+            text-align: center;
+            padding: 50px;
+        }
+        .content h1 {
+            font-size: 50px;
+            color: #ff1493;
+        }
+        .content p {
+            font-size: 24px;
+            color: #ff69b4;
+        }
+        .heart {
+            color: #ff1493;
+            font-size: 100px;
+            animation: beat 1s infinite;
+        }
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+        footer {
+            background-color: #ff69b4;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            color: white;
+        }
+        #difficulty-selection {
+            margin-top: 20px; /* Espaço acima da seleção */
+        }
+        #image-display {
+            text-align: center; /* Centraliza a imagem */
+            margin-top: 20px; /* Espaço acima da imagem */
+        }
+        #difficulty-image {
+            width: 300px; /* Define a largura fixa */
+            height: 200px; /* Define a altura fixa */
+            object-fit: cover; /* Mantém a proporção da imagem e cobre o contêiner */
+            display: none; /* Inicialmente oculta a imagem */
+            margin: 0 auto; /* Centraliza a imagem horizontalmente */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="pagina2.html" class="active">Princesa</a></li>
+            <li><a href="pagina3.html">A Melhor Playlist</a></li>
+            <li><a href="pagina4.html">Planos Para viagem</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Princesa</h1>
+        <div id="difficulty-selection">
+            <p>Escolha a "Qualidade" da Princesa:</p>
+            <select id="difficulty" onchange="showImage()">
+                <option>Escolha</option>
+                <option value="144p">144p</option>
+                <option value="240p">240p</option>
+                <option value="360p">360p</option>
+                <option value="480p">480p</option>
+                <option value="720p">720p</option>
+                <option value="1080p">1080p</option>
+            </select>
+            <div id="image-display">
+                <img id="difficulty-image" src="" alt="">
+            </div>
+        </div>
+        <p class="heart">❤</p>
+    </div>
+
+    <footer>
+        Feito por João Pedro 💕
+    </footer>
+
+    <script>
+        function showImage() {
+            const select = document.getElementById("difficulty");
+            const image = document.getElementById("difficulty-image");
+            const resolution = select.value;
+
+            // Mapeia cada resolução a uma imagem correspondente
+            const imageMap = {
+                "144p": "img1.png", // Substitua pelo caminho da imagem
+                "240p": "img2.png",
+                "360p": "img3.png",
+                "480p": "img4.png",
+                "720p": "img5.png",
+                "1080p": "img9.jpeg"
+            };
+
+            // Define a fonte da imagem e exibe
+            image.src = imageMap[resolution];
+            image.alt = `${resolution} image`;
+            image.style.display = "block"; // Mostra a imagem
+        }
+    </script>
+
+</body>
+</html>

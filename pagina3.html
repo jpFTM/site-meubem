@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lais💖</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #ffe4e1;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Remove barra de rolagem horizontal */
+        }
+        nav {
+            background-color: #ff69b4;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Adiciona flex wrap para prevenir overflow */
+        }
+        nav ul li {
+            margin: 0 10px; /* Reduzi a margem para evitar overflow */
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: #ff1493;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #ff85c0;
+        }
+        nav ul li a.active {
+            background-color: white;
+            color: #ff69b4;
+            font-weight: bold;
+        }
+        .content {
+            text-align: center;
+            padding: 50px;
+        }
+        .content h1 {
+            font-size: 50px;
+            color: #ff1493;
+        }
+        .content p {
+            font-size: 24px;
+            color: #ff69b4;
+        }
+        .heart {
+            color: #ff1493;
+            font-size: 100px;
+            animation: beat 1s infinite;
+        }
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+        footer {
+            background-color: #ff69b4;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="pagina2.html">Princesa</a></li>
+            <li><a href="pagina3.html" class="active">A Melhor Playlist</a></li>
+            <li><a href="pagina4.html">Planos Para Viagem</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Nossa Playlist, para a gente</h1> 
+        <div style="text-align: center;">
+            <img src="pl1.png" style="max-width: 80%; height: auto; margin-top: 20px; display: block; margin-left: auto; margin-right: auto;">
+            <img src="code.jpeg" style="max-width: 20%; height: auto; margin-top: 10px; display: block; margin-left: auto; margin-right: auto;"> <!-- Escala reduzida -->
+        </div>
+        <a href="https://open.spotify.com/playlist/4g1QXqV4unPoeOfUMchVnq?si=OiHfJcjwSD67VVQdmJQdZQ" style="font-size: 24px; color: #bf4ed6; text-decoration: none; margin-top: 20px; display: block; text-align: center;">
+            Clique aqui para ir para Playlist
+        </a>
+        <p class="heart">❤</p>
+    </div>
+
+    <footer>
+        Feito por João Pedro 💕
+    </footer>
+
+</body>
+</html>
